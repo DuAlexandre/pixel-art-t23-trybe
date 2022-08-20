@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    justify-content: center;
+    text-align: center;
+}
+
+.color {
+    width: 20px;
+    height: 20px;
+    border: solid black 1px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.selected {
+    border: solid gold 5px;
+}
+
+#fixed-color, #random-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    margin-top: auto;
+    padding-bottom: 5px;
+}
