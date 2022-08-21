@@ -1,4 +1,4 @@
-//Create random color
+// Create random color
 
 const randomRgb = () => {
     let red = Math.floor(Math.random() * 256);
@@ -15,3 +15,94 @@ const randomColors = () => {
 }
 
 randomColors();
+
+//Button New colors
+
+const newColors = document.querySelector('#newColor');
+newColors.addEventListener('click', () => {
+    return randomColors();
+})
+
+// Create Board
+
+const createBoard = (input) => {
+    const pixelBoard = document.querySelector('#board');
+    let pixel = '';
+    for (let linha = 0; linha < input; linha += 1) {
+        for (let coluna = 0; coluna < input; coluna += 1) {
+            pixel += `<div class="pixel" style="width: ${(440 - input) / input}px; height: ${(440 - input) / input}px;"></div>`
+        }
+    }
+    pixelBoard.innerHTML = pixel;
+}
+
+createBoard(5);
+
+// Color Board
+
+const colorBoard = () => {
+    let pixelBoard = document.querySelector('#board');
+    pixelBoard.addEventListener('click', (event) => {
+        let pixel = event.target;
+        if (pixel.classList.contains('pixel')) {
+            const selectedColor = document.querySelector('.selected');
+            pixel.style.backgroundColor = selectedColor.style.backgroundColor;
+        }
+    });
+}
+
+colorBoard();
+
+// Select Color
+
+const selectColor = () => {
+    let colorPalette=document.querySelector('#color-palette')
+    colorPalette.addEventListener('click', (event) => {
+        const color = event.target;
+        if (color.classList.contains('color')) {
+            const selectedColor = document.querySelector('.selected');
+            selectedColor.classList.remove('selected') //remove a classe
+            color.classList.add('selected'); //adiciona a classe
+        }
+    })
+}
+
+selectColor();
+
+// Clear Board
+
+const clearBoard = () => {
+    let clearButton = document.querySelector('#clearBoard');
+    clearButton.addEventListener('click', () => {
+        let pixels = document.querySelectorAll('.pixel');
+        for (const pixel of pixels) {
+            pixel.style.backgroundColor = 'white';
+        }
+    })
+}
+
+clearBoard();
+
+
+// Board Size
+
+const boardSize = () => {
+    let createButton =document.querySelector('#createBoard');
+    createButton.addEventListener('click', () => {
+        let input = document.querySelector('#inputPixel');
+        if (!input.value) {
+            alert('Board inválido!')
+        }
+        else if (input.value < 5) {
+            createBoard(5);
+        }
+        else if (input.value > 50) {
+            createBoard(50);
+        }
+        else {
+            createBoard(input.value)
+        }
+    })
+}
+
+boardSize();

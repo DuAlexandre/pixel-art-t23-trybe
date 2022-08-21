@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
+    <header id="color-palette">
         <h1>Paleta de Cores</h1>
         <h2>Cores Aleatórias</h2>
         <section id="random-color">
@@ -37,8 +37,16 @@
             <div class="color" style="background-color: violet;"></div>
         </section>
     </header>
-    <nav></nav>
-    <main></main>
+    <nav id="buttons">
+        <label for="pixels">Pixels (Linha x Coluna)</label>
+        <input type="number" id="inputPixel" placeholder="5 - 50">
+        <button id="createBoard">Criar Quadro</button>
+        <button id="clearBoard">Limpar</button>
+        <button id="newColor">Novas Cores</button>
+    </nav>
+    <main>
+        <div id="board"></div>
+    </main>
     <footer>Projeto desenvolvido por <a href="https://www.linkedin.com/in/eduardo-alexandre025/" target="_blank">Eduardo Alexandre</a></footer>
     <script src="./js/script.js"></script>
 </body>

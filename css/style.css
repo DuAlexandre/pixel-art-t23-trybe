@@ -7,22 +7,51 @@ body {
     text-align: center;
 }
 
+h1, h2{
+    margin: 5px 0px;
+}
+
 .color {
     width: 20px;
     height: 20px;
-    border: solid black 1px;
+    border: solid black 2px;
     margin: 0px 20px;
     cursor: pointer;
 }
 
 .selected {
-    border: solid gold 5px;
+    border: solid gold 2px;
 }
 
 #fixed-color, #random-color {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px 0px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+#buttons {
+    margin: 20px 0px 10px 0px;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    height: 440px;
+    width: 440px;
+}
+
+.pixel {
+    border-right: black solid 1px;
+    border-bottom: black solid 1px;
+    
 }
 
 footer {
