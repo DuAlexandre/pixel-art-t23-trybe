@@ -26,14 +26,38 @@ newColors.addEventListener('click', () => {
 // Create Board
 
 const createBoard = (input) => {
-    const pixelBoard = document.querySelector('#board');
-    let pixel = '';
-    for (let linha = 0; linha < input; linha += 1) {
-        for (let coluna = 0; coluna < input; coluna += 1) {
-            pixel += `<div class="pixel" style="width: ${(550 - input) / input}px; height: ${(550 - input) / input}px;"></div>`
-        }
-    }
+    let boardSize = window.matchMedia('(max-width: 600px)')
+    let boardSize2 = window.matchMedia('(max-width: 420px)')
+    if (boardSize.matches) {
+        const pixelBoard = document.querySelector('#board');
+        let pixel = '';
+        for (let linha = 0; linha < input; linha += 1) {
+            for (let coluna = 0; coluna < input; coluna += 1) {
+                pixel += `<div class="pixel" style="width: ${(390 - input) / input}px; height: ${(390 - input) / input}px;"></div>`
+            }
+        }   
     pixelBoard.innerHTML = pixel;
+    }
+    if (boardSize2.matches) {
+        const pixelBoard = document.querySelector('#board');
+        let pixel = '';
+        for (let linha = 0; linha < input; linha += 1) {
+            for (let coluna = 0; coluna < input; coluna += 1) {
+                pixel += `<div class="pixel" style="width: ${(320 - input) / input}px; height: ${(320 - input) / input}px;"></div>`
+            }
+        }   
+    pixelBoard.innerHTML = pixel;
+    }
+    else {
+        const pixelBoard = document.querySelector('#board');
+        let pixel = '';
+        for (let linha = 0; linha < input; linha += 1) {
+            for (let coluna = 0; coluna < input; coluna += 1) {
+                pixel += `<div class="pixel" style="width: ${(550 - input) / input}px; height: ${(550 - input) / input}px;"></div>`
+            }
+        }
+    pixelBoard.innerHTML = pixel;
+    }
 }
 
 createBoard(10);

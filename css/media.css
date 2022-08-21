@@ -1,0 +1,51 @@
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 10px;
+    }
+
+    .color {
+        width: 15px;
+        height: 15px;
+        margin: 10px 5px;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inputPixel {
+        margin-top: 5px;
+    }
+
+    button {
+        margin: 5px;
+    }
+
+    main {
+        width: 410px;
+        height: 410px;
+    }
+    
+    #board {
+        width: 390px;
+        height: 390px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    main {
+        width: 340px;
+        height: 340px;
+    }
+
+    #board {
+        width: 320px;
+        height: 320px;
+    }
+}
