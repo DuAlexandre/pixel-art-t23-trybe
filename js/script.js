@@ -27,7 +27,7 @@ newColors.addEventListener('click', () => {
 
 const createBoard = (input) => {
     let boardSize = window.matchMedia('(max-width: 600px)')
-    let boardSize2 = window.matchMedia('(max-width: 420px)')
+    let boardSize2 = window.matchMedia('(max-width: 430px)')
     if (boardSize.matches) {
         const pixelBoard = document.querySelector('#board');
         let pixel = '';
