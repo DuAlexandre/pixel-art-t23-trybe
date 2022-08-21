@@ -36,7 +36,7 @@ const createBoard = (input) => {
     pixelBoard.innerHTML = pixel;
 }
 
-createBoard(5);
+createBoard(10);
 
 // Color Board
 
@@ -93,8 +93,8 @@ const boardSize = () => {
         if (!input.value) {
             alert('Board inválido!')
         }
-        else if (input.value < 5) {
-            createBoard(5);
+        else if (input.value < 10) {
+            createBoard(10);
         }
         else if (input.value > 50) {
             createBoard(50);

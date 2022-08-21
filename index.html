@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Art</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="http://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
 </head>
 <body>
     <header id="color-palette">
@@ -37,14 +38,14 @@
             <div class="color" style="background-color: violet;"></div>
         </section>
     </header>
-    <nav id="buttons">
-        <label for="pixels">Pixels (Linha x Coluna)</label>
-        <input type="number" id="inputPixel" placeholder="5 - 50">
-        <button id="createBoard">Criar Quadro</button>
-        <button id="clearBoard">Limpar</button>
-        <button id="newColor">Novas Cores</button>
-    </nav>
     <main>
+        <nav id="buttons">
+            <label for="pixels">Pixels</label>
+            <input type="number" id="inputPixel" placeholder="10 - 50">
+            <button id="createBoard">Criar Quadro</button>
+            <button id="clearBoard">Limpar</button>
+            <button id="newColor">Novas Cores</button>
+        </nav>
         <div id="board"></div>
     </main>
     <footer>Projeto desenvolvido por <a href="https://www.linkedin.com/in/eduardo-alexandre025/" target="_blank">Eduardo Alexandre</a></footer>
