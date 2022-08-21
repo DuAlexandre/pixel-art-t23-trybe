@@ -30,7 +30,7 @@ const createBoard = (input) => {
     let pixel = '';
     for (let linha = 0; linha < input; linha += 1) {
         for (let coluna = 0; coluna < input; coluna += 1) {
-            pixel += `<div class="pixel" style="width: ${(440 - input) / input}px; height: ${(440 - input) / input}px;"></div>`
+            pixel += `<div class="pixel" style="width: ${(550 - input) / input}px; height: ${(550 - input) / input}px;"></div>`
         }
     }
     pixelBoard.innerHTML = pixel;

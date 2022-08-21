@@ -5,19 +5,27 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0px;
-    justify-content: center;
     text-align: center;
     align-items: center;
     font-family: 'Public Pixel', sans-serif;
 }
 
+#container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
 h1, h2{
-    margin: 5px 0px;
     color: white;
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 30px;
+    margin: 20px;
 }
 
 h2 {
@@ -25,11 +33,17 @@ h2 {
 }
 
 .color {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     border: solid black 2px;
-    margin: 0px 15px;
+    margin: 20px 10px;
     cursor: pointer;
+    transition: transform .2s;
+}
+
+.color:hover {
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .selected {
@@ -39,23 +53,23 @@ h2 {
 #fixed-color, #random-color {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 0px
 }
 
 main {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     background-color: rgba(255, 255, 255, 0.4);
-    width: 480px;
-    height: 480px;
+    width: 580px;
+    height: 580px;
     border-radius: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 #inputPixel {
     width: 60px;
+    border-radius: 5px;
+    border: gold solid 1px;
 }
 
 #buttons {
@@ -63,19 +77,28 @@ main {
 }
 
 #board {
-    background-color: white;
     display: flex;
     flex-wrap: wrap;
     border-top: black solid 1px;
     border-left: black solid 1px;
-    height: 440px;
-    width: 440px;
+    height: 550px;
+    width: 550px;
 }
 
 .pixel {
     border-right: black solid 1px;
     border-bottom: black solid 1px;
-    
+    background-color: white;
+    -webkit-filter: brightness(100%)
+}
+
+.pixel:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+        transition: all 200ms ease;
 }
 
 label {
@@ -86,6 +109,22 @@ label {
 button {
     font-family: 'Public Pixel', sans-serif;
     font-size: 8px;
+    padding: 5px 10px;
+    color: white;
+    background-color: gold;
+    border: white solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-filter: brightness(100%);
+}
+
+button:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+        transition: all 200ms ease;
 }
 
 footer {

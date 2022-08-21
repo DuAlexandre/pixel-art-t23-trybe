@@ -9,10 +9,11 @@
     <link href="http://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
 </head>
 <body>
-    <header id="color-palette">
-        <h1>Paleta de Cores</h1>
-        <h2>Cores Aleatórias</h2>
-        <section id="random-color">
+    <div id="container">
+        <header id="color-palette">
+            <h1>Paleta de Cores</h1>
+            <h2>Cores Aleatórias</h2>
+            <section id="random-color">
             <div class="color"></div>
             <div class="color"></div>
             <div class="color"></div>
@@ -23,9 +24,9 @@
             <div class="color"></div>
             <div class="color"></div>
             <div class="color"></div>
-        </section>
-        <h2>Cores Fixas</h2>
-        <section id="fixed-color">
+            </section>
+            <h2>Cores Fixas</h2>
+            <section id="fixed-color">
             <div class="color selected" style="background-color: black;"></div>
             <div class="color" style="background-color: white;"></div>
             <div class="color" style="background-color: brown;"></div>
@@ -36,18 +37,19 @@
             <div class="color" style="background-color: blue;"></div>
             <div class="color" style="background-color: indigo;"></div>
             <div class="color" style="background-color: violet;"></div>
-        </section>
-    </header>
-    <main>
-        <nav id="buttons">
+            </section>
+            <nav id="buttons">
             <label for="pixels">Pixels</label>
             <input type="number" id="inputPixel" placeholder="10 - 50">
             <button id="createBoard">Criar Quadro</button>
             <button id="clearBoard">Limpar</button>
             <button id="newColor">Novas Cores</button>
-        </nav>
-        <div id="board"></div>
-    </main>
+            </nav>   
+        </header>
+        <main> 
+            <div id="board"></div>
+        </main>
+    </div>
     <footer>Projeto desenvolvido por <a href="https://www.linkedin.com/in/eduardo-alexandre025/" target="_blank">Eduardo Alexandre</a></footer>
     <script src="./js/script.js"></script>
 </body>
