@@ -7,7 +7,7 @@ body {
     margin: 0px;
     text-align: center;
     align-items: center;
-    font-family: 'Public Pixel', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #container {
@@ -24,12 +24,12 @@ h1, h2{
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin: 20px;
 }
 
 h2 {
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .color {
@@ -102,13 +102,13 @@ main {
 }
 
 label {
-    font-size: 10px;
+    font-size: 20px;
     color: white;
 }
 
 button {
     font-family: 'Public Pixel', sans-serif;
-    font-size: 8px;
+    font-size: 15px;
     padding: 5px 10px;
     color: white;
     background-color: gold;
@@ -130,5 +130,5 @@ button:hover {
 footer {
     margin-top: auto;
     padding-bottom: 5px;
-    font-size: 5px;
+    font-size: 10px;
 }
